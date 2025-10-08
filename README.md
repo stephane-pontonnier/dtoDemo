@@ -1,5 +1,5 @@
 # dtoDemo
-Démo pédagogique d’un projet Spring Boot illustrant l’utilisation des DTO (Data Transfer Objects) pour séparer les entités JPA de l’API exposée.
+Démo d’un projet Spring Boot illustrant l’utilisation des DTO (Data Transfer Objects) pour séparer les entités JPA de l’API exposée.
 ***
 ## :open_file_folder: Structure du projet
 - `entity/` — contient les entités JPA (modèles persistés en base)
