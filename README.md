@@ -36,4 +36,58 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
 + L’option `createDatabaseIfNotExist=true` permet de créer la base `dto_demo` automatiquement si elle n’existe pas.
 + Le paramètre `ddl-auto=update` indique à Hibernate de mettre à jour le schéma selon les entités.
+***
+## :running: Lancement de l’application
+1. Construis le projet avec Maven :
+```
+bash
+
+mvn clean install
+```
+2. Lance l’application Spring Boot :
+```
+bash
+
+mvn spring-boot:run
+```
+L’API sera disponible par défaut sur `http://localhost:9000`.
+***
+## :package: Endpoints API
+### :heavy_plus_sign: Créer un utilisateur (sous Postman par exemple)
+```
+POST http://localhost:9000/api/utilisateurs?password=secret
+Content-Type: application/json
+
+{
+  "nom": "Dupont",
+  "prenom": "Jean"
+}
+```
+Réponse (exemple) :
+```
+json
+{
+  "id": 1,
+  "nom": "Dupont",
+  "prenom": "Jean"
+}
+```
+### :mag_right: Récupérer tous les utilisateurs
+```
+GET http://localhost:8080/api/utilisateurs
+```
+Réponse
+```
+json
+{
+  "id": 1,
+  "nom": "Dupont",
+  "prenom": "Jean"
+}
+```
+## :brain: Concepts clés à retenir
+
+
+
+
 
