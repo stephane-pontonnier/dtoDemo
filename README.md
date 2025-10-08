@@ -74,7 +74,7 @@ json
 ```
 ### :mag_right: Récupérer tous les utilisateurs
 ```
-GET http://localhost:8080/api/utilisateurs
+GET http://localhost:9000/api/utilisateurs
 ```
 Réponse
 ```
@@ -86,6 +86,23 @@ json
 }
 ```
 ## :brain: Concepts clés à retenir
++ **Entité (Entity)** : classe mappée à une table de la base de données
++ **DTO (Data Transfer Object)** : classe utilisée pour l’échange de données via l’API, ne contenant que les champs nécessaires
++ **Mapper** : classe utilitaire qui convertit entre entité et DTO
++ **Service** : couche métier, qui effectue les conversions et les appels au repository
++ **Repository** : interface Spring Data JPA pour manipuler les entités en base
+***
+## :jigsaw: Extensions possibles / améliorations
++ Utiliser **MapStruct** pour générer automatiquement les mappers DTO ↔ Entity
++ Ajouter des validations (`@Valid`, `@NotNull`, etc.) sur les DTO
++ Gérer la mise à jour (UPDATE) et la suppression (DELETE) des utilisateurs
++ Ajouter des champs supplémentaires (email, rôles, date de création, etc.)
++ Mettre en place une authentification / sécurité (Spring Security)
++ Ajouter des tests unitaires / d’intégration
+
+
+
+
 
 
 
